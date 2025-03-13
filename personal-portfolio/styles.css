@@ -1,3 +1,4 @@
+/*reset*/
 * {
     margin: 0px;
     padding: 0px;
@@ -5,7 +6,7 @@
 
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    /*line-height: 1.6;*/
+    line-height: 1.6;
     margin: 0;
     padding: 0;
     background-color: #f4f6f9;
@@ -16,9 +17,18 @@ header {
     background-color: #758391;
 }
 
+/*default text alignment is justify*/
+p {
+    text-align: justify;
+}
+
+h2 {
+    text-align: center;
+}
+
+/*nav bar format, including name as title and link hover changes*/
 nav {
     background-color: #758391;
-    /* Dark Gray */
     text-align: center;
     padding: 12px 0;
     width: 100%;
@@ -38,43 +48,111 @@ nav {
 .nav-links {
     list-style: none;
     display: flex;
-  }
+}
   
-  .nav-item a {
+.nav-item a {
     display: inline-block;
     padding: 10px 15px;
     text-decoration: none;
     color: white;
-  }
+}
   
-  .nav-item:hover {
+.nav-item:hover {
     background-color: white;
-  }
+}
   
-  .nav-item:hover a {
+.nav-item:hover a {
     color: #0c4b45;
-  }
-  
-#about {
-    text-align: center;
-    padding: 2em;
 }
 
+/*basic format for all sections*/
+section {
+    max-width: 700px;
+    text-align: center;
+    margin: auto;
+}
+
+/*format for about section*/
 #about img {
+    padding: 2em;
     width: 150px;
     border-radius: 50%;
 }
 
-/*nav a {
-    color: #ffffff;
-    text-decoration: none;
-    margin: 0 20px;
-    font-weight: 600;
-    font-size: 1.1rem;
-    letter-spacing: 0.5px;
+/*format for skills section with responsive flex wrapping*/
+#skills {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 2em;
 }
-nav a:hover {
-    color: #2bd4c6;
-    /* Tomato
-    text-decoration: underline;
-}*/
+
+/*format for individual skill objects*/
+.skill {
+    flex: 1;
+    min-width: 150px;
+    margin: 1em;
+    text-align: center;
+    background: #eee;
+    padding: 1em;
+    border-radius: 8px;
+}
+
+/*format for skills heading, display first*/
+#skills .title {
+    order: -1;
+    width: 100%;
+}
+
+/*format for projects section with responsive flex wrapping*/
+#projects {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+/*format for individual project objects*/
+#projects .project {
+    max-width: 160px;
+    margin: 1em;
+    padding: 1em;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background: #f9f9f9;
+}
+
+/*format for project images*/
+#projects img {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+/*format for skills heading, display first*/
+#projects .title {
+    order: -1;
+    width: 100%;
+}
+
+/*format for contact section*/
+#contact {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+#contact .contact {
+    width: 100%;
+}
+
+/*format for skills heading, display first*/
+#contact .title {
+    order: -1;
+    width: 100%;
+}
+
+/*center paragraph here instead of default justify*/
+#contact p {
+    text-align: center;
+}
